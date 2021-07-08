@@ -11,8 +11,8 @@ public class EvenOddTaskThread implements Runnable {
 
 	private int max;
 	private int start;
-    private Printer print;
-	
+	private Printer print;
+
 	/**
 	 * EvenOdd constructor
 	 * @param printObj - shared Printer class instance
@@ -31,18 +31,10 @@ public class EvenOddTaskThread implements Runnable {
 		while (start <= max) {
 			// if start is even
 			if (start%2 == 0) {
-				try {
-					print.printEven(start);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+				print.printEven(start);
 			} else {
-				try {
-					// if start is odd
-					print.printOdd(start);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+				// if start is odd
+				print.printOdd(start);
 			}
 			start += 2;
 		}

@@ -1,0 +1,1 @@
+write program to print numbers in sequence for given 3 threads upto 20.

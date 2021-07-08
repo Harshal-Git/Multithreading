@@ -13,12 +13,15 @@ Threads & Multi threading basic concepts:
 	
 Thread execution prevention
 	1. yield()
-	2. join()
+	2. join() - actually a wait operation which waits for other threads to finish it's execution
 	3. sleep()
+	
+Thread interruption 
+	1. interrupt() 
 	
 Synchronization
 
-Interthread communication
+Inter-thread communication
 	1. wait()
 	2. notify()
 	3. notifyAll()

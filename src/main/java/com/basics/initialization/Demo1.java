@@ -17,22 +17,22 @@ public class Demo1 {
 	public static void main(String[] args){
 
 		// thread instantiation
-		MyThread t1 = new MyThread();
+		MyThread1 t1 = new MyThread1();
 		t1.start();
 	}
 }
 
 // custom class extending java.lang.Thread class
-class MyThread extends Thread {
+class MyThread1 extends Thread {
 
 	@Override
 	public void run() {
 		for(int i = 0; i < 10; i++) {
-			System.out.println(this.getName()+" count - "+(i+1));
+			System.out.println(Thread.currentThread().getName()+" count - "+(i+1));
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				System.out.println(this.getName()+" interrupted.");
+				System.out.println(Thread.currentThread().getName()+" interrupted.");
 			}
 		}
 	}
