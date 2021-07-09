@@ -3,8 +3,6 @@ Threads &amp; Multi threading concepts
 
 ###
 
-#PENDING  : Given 2 arrays - {1, 3, 5, 7, 9} and {2, 4, 6, 8, 10} and print 1-10 in sequence using threads.
-
 Threads & Multi threading basic concepts:
 
 2 ways to initialize thread : 
@@ -19,7 +17,11 @@ Thread execution prevention
 Thread interruption 
 	1. interrupt() 
 	
-Synchronization
+Synchronization : synchronized keyword for 
+	1. method 
+	2. block
+	
+-> Object lock is obtained at object level & not at method level.
 
 Inter-thread communication
 	1. wait()
