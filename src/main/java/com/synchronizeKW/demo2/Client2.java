@@ -7,10 +7,10 @@ package com.synchronizeKW.demo2;
  * @author Harshal-Git
  *
  *	if unsynchronized com.synchronizeKW.demo2.Wish.wish(String) method with:
- *	-> multiple threads with shared instance : irregular output
+ *	-> multiple threads without shared instance : irregular output
  *
  *	if "static synchronized" com.synchronizeKW.demo2.Wish.wish(String) method with:
- *	-> multiple threads with shared instance : regular output
+ *	-> multiple threads without shared instance : regular output
  */
 public class Client2 {
 

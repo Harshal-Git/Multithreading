@@ -6,6 +6,7 @@ package com.synchronizeKW.demo3;
 /**
  * @author Harshal-Git
  *
+ *	-> thread to access only number printing methods
  */
 public class Thread2 implements Runnable{
 

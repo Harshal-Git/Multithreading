@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.synchronizeKW.demo3;
+package com.synchronizeKW.demo4;
 
 /**
  * @author Harshal-Git
@@ -13,8 +13,7 @@ public class Display {
 	/*
 	 * method to print numbers
 	 */
-	//public synchronized void printN() {
-	public void printN() {	
+	public static synchronized void printN() {
 		for(int i = 1; i <= 10; i++) {
 			System.out.print(i+" ");
 			try {
@@ -28,8 +27,7 @@ public class Display {
 	/*
 	 * method to print characters
 	 */
-	//public synchronized void printC() {
-	public void printC() {
+	public static synchronized void printC() {
 		for(int i = 65; i <= 75; i++) {
 			System.out.print(((char)i)+" ");
 			try {

@@ -7,10 +7,10 @@ package com.synchronizeKW.demo3;
  * @author Harshal-Git
  *
  *	2 threads with a shared object
- *	-> without "synchronized" : irregular output
+ *	-> without "synchronized" methods : irregular output
  *
  *	2 threads with a shared object
- *	-> with "synchronized" : regular output
+ *	-> with "synchronized" methods : regular output
  */
 public class Client1 {
 
