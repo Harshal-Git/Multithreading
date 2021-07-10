@@ -10,10 +10,8 @@ package com.synchronizeKW.demo4;
  *		methods for the same shared object; then that thread will be able to execute; only in sequence.
  *
  * 		There will be no exception raised for the same.
- * 
- * 	-> even only "synchronized" method also will work.
- * 
- * 	-> 
+ *	
+ *	-> because it's single thread trying to execute both methods; they will work in synch. 
  */
 public class Client {
 

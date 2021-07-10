@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.threadExecutionPrevention;
+package com.threadDeadlock;
 
 /**
  * @author Harshal-Git
@@ -22,7 +22,7 @@ public class JoinDeadlockDemo {
 		
 		// make main thread wait for child thread
 		try {
-			Thread.currentThread().join();
+			t1.join();
 		} catch (InterruptedException e1) {
 			System.out.println("Main thread interrupted.");
 		}

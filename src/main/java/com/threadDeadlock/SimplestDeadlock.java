@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.threadExecutionPrevention;
+package com.threadDeadlock;
 
 /**
  * @author Harshal-Git
