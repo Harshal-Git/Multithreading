@@ -20,8 +20,8 @@ public class EvenOddTaskThread implements Runnable {
 	 * @param startNum - start number for given thread
 	 */
 	public EvenOddTaskThread(Printer printObj, int max, int startNum) {
-		this.max = max;
 		this.print = printObj;
+		this.max = max;
 		this.start = startNum;
 	}
 

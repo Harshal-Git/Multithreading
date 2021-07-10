@@ -12,38 +12,41 @@ package com.printEvenOdd;
  */
 public class Printer {
 
-	// this keeps changing so volatile
-	private volatile boolean isOdd;
+	// this keeps changing so volatile : if initialized to TRUE
+	// then result will be 2 1 4 3 6 5 8 7 10 9 
+	private volatile boolean isOdd = false;
 
 	// print even number : synchronized method
-	public synchronized void printEven(int number) {
-		while (!isOdd) {
-			try {
-				wait();
-				Thread.sleep(100);
-			} catch (InterruptedException e) {
-				System.out.println("printEven() wait() interrupted.");
+	public void printEven(int number) {
+		synchronized (this) {
+			while (!this.isOdd) {
+				try {
+					this.wait(100);	// wait initiated on current object by executing thread 
+					Thread.sleep(300);	// just to delay printing
+				} catch (InterruptedException e) {
+					System.out.println("printEven() wait() interrupted.");
+				}
 			}
+			System.out.println(Thread.currentThread().getName()+" - "+number);
+			this.isOdd = false;
+			this.notifyAll();
 		}
-		System.out.print(number+" ");
-		isOdd = false;
-		notifyAll();
 	}
 
 	// print odd number : synchronized block
 	public void printOdd(int number) {
-		synchronized(this) {
-			while(isOdd) {
+		synchronized(this) {	// synchronized on current object
+			while(this.isOdd) {
 				try {
-					wait();
-					Thread.sleep(100);
+					this.wait(100);	// wait initiated on current object by executing thread 
+					Thread.sleep(300); // just to delay printing
 				} catch (InterruptedException e) {
 					System.out.println("printOdd() wait() interrupted.");
 				}
 			}
-			System.out.print(number+" ");
-			isOdd = true;
-			notifyAll();
+			System.out.println(Thread.currentThread().getName()+" - "+number);
+			this.isOdd = true;
+			this.notifyAll();
 		}
 	}
 }
