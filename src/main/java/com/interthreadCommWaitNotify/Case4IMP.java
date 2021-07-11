@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.interthreadComm;
+package com.interthreadCommWaitNotify;
 
 /**
  * @author Harshal-Git
  *
  *	-> approach 3: expected solution to notify the waiting main thread about completion of the calculation.
  */
-public class Case4 {
+public class Case4IMP {
 
 	/**
 	 * @param args
@@ -23,7 +23,14 @@ public class Case4 {
 		synchronized (t1) {
 			try {
 				System.out.println("main thread waiting for t1.");
+				
+				/**
+				 * this statement : 
+				 * 	-> executed by main thread 
+				 * 	-> to make it wait for child thread's notification
+				 */
 				t1.wait();
+				
 				System.out.println("main thread got notification.");
 			} catch (InterruptedException e) {
 				System.out.println("t1.join() interrupted.");

@@ -1,12 +1,12 @@
 /**
  * 
  */
-package com.threadDeadlock;
+package com.threadDeadlock.withJoin;
 
 /**
  * @author Harshal-Git
  *
- *	-> A DEAD LOCK: Main thread waiting for completion of main thread
+ *	-> A DEAD LOCK: Main thread waiting for completion of main thread : DEAD LOCK BY JOIN METHOD.
  */
 public class SimplestDeadlock {
 

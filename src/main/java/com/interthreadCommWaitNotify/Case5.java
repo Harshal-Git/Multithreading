@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.interthreadComm;
+package com.interthreadCommWaitNotify;
 
 /**
  * @author Harshal-Git
@@ -36,9 +36,9 @@ public class Case5 {
 			try {
 				System.out.println("main thread waiting for t1.");
 				
-				t1.wait(); 	// not at all good approach to wait forever
+				//t1.wait(); 	// not at all good approach to wait forever
 				 
-				//t1.wait(1000);
+				t1.wait(1000);	// main thread should wait for a definite amount of time
 				
 				System.out.println("main thread got notification.");
 			} catch (InterruptedException e) {

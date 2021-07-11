@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.printEvenOdd;
+package com.zz.printEvenOdd;
 
 /**
  * @author Harshal-Git

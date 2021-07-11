@@ -1,12 +1,12 @@
 /**
  * 
  */
-package com.interthreadComm;
+package com.interthreadCommWaitNotify;
 
 /**
  * @author Harshal-Git
  *
- *	-> original case : it may OR may not print correct result and that's where the issue lies.
+ *	-> original case : main thread may OR may not print correct calculation result and that's where the issue lies.
  */
 public class Case1 {
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.interthreadComm;
+package com.interthreadCommWaitNotify;
 
 /**
  * @author Harshal-Git
