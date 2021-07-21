@@ -7,7 +7,7 @@ package com.threadDeadlock.withLockedObjects;
  * @author Harshal-Git
  *
  *	-> Case 1: 
- *		if methods m1() & m2() in class A & B doesn't are not synchronized; both threads will independently execute these methods
+ *		if methods m1() & m2() in class A & B are not synchronized; both threads will independently execute these methods
  *		without acquiring lock. 
  *
  *	-> Case 2:
