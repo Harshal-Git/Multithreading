@@ -30,6 +30,7 @@ public class Fibonacci extends RecursiveTask<Long> {
 		Fibonacci f1 = new Fibonacci(seriesLength-1);
 		f1.fork();
 		Fibonacci f2 = new Fibonacci(seriesLength-2);
+		// join() always has to be the last step to call
 		return (f2.compute()+f1.join());
 	}
 }

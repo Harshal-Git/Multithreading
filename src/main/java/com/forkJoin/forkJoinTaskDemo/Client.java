@@ -31,6 +31,8 @@ public class Client {
 		// use all processors
 		ForkJoinPool pool = new ForkJoinPool(Runtime.getRuntime().availableProcessors());
 		
+		System.out.println("Task has been initiated for Fib("+seriesNumber+")...");
+		
 		// invoke computation
 		Long result = pool.invoke(fb);
 		
