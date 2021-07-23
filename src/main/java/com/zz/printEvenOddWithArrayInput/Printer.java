@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.zz.printEvenOdd;
+package com.zz.printEvenOddWithArrayInput;
 
 /**
  * @author Harshal-Git
@@ -31,6 +31,7 @@ public class Printer {
 			System.out.println(Thread.currentThread().getName()+" - "+number);
 			// change the number status to ODD
 			this.isEven = false;
+			// notify all waiting threads
 			this.notifyAll();
 		}
 	}
@@ -50,6 +51,7 @@ public class Printer {
 			System.out.println(Thread.currentThread().getName()+" - "+number);
 			// change the number status to EVEN
 			this.isEven = true;
+			// notify all waiting threads
 			this.notifyAll();
 		}
 	}
