@@ -21,7 +21,7 @@ public class Client {
 	public static void main(String[] args) {
 
 		// for how many tasks; main task will have to wait
-		CountDownLatch latch = new CountDownLatch(4);
+		CountDownLatch latch = new CountDownLatch(2);
 
 		// prepare runnable instances
 		WorkerRunnable w1 = new WorkerRunnable("Worker-1", latch);

@@ -35,6 +35,8 @@ class IntClass2 implements Runnable {
 	@Override
 	public void run() {
 		try {
+			// no matter even thread has completed it's work and later at 
+			// sometime if it goes for sleep; it will be interrupted.
 			for(int i = 1; i <= 10000; i++) {
 				System.out.println("thread-"+i);
 			}

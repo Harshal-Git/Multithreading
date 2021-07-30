@@ -13,7 +13,7 @@ package com.interthreadCommWaitNotify;
  *
  *	-> for such cases; we should terminate main thread's waiting state after some time.
  */
-public class Case5 {
+public class Case5IMP {
 
 	/**
 	 * @param args
@@ -26,6 +26,7 @@ public class Case5 {
 
 		// after initiating child thread, main thread goes to sleep
 		try {
+			System.out.println("main thread will sleep...");
 			Thread.sleep(5000);
 		} catch(InterruptedException e) {
 			System.out.println("sleeping main() thread got interrupted.");
@@ -34,7 +35,7 @@ public class Case5 {
 		// send main thread in waiting state; for an update from child thread
 		synchronized (t1) {
 			try {
-				System.out.println("main thread waiting for t1.");
+				System.out.println("main thread waiting for childThread...");
 				
 				//t1.wait(); 	// not at all good approach to wait forever
 				 

@@ -6,7 +6,7 @@ package com.threadExecutionPrevention;
 /**
  * @author Harshal-Git
  *
- *	-> Case : main thread waiting for child thread to finish it's partial execution.
+ *	-> Case : main thread waiting for a specific time for child thread to finish it's partial execution.
  *
  *	-> join() method will make the executing thread to wait for other thread to finish it's execution.
  *

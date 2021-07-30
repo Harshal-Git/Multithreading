@@ -17,7 +17,7 @@ public class CounterThread2 implements Runnable{
 	@Override
 	public void run() {
 		synchronized (this) {
-			System.out.println("child thread calculating.");
+			System.out.println("childThread started calculation...");
 			for(int i = 1; i <= 100; i++) {
 				total += i;
 			}

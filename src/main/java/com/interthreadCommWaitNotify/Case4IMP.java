@@ -22,7 +22,7 @@ public class Case4IMP {
 		// send main thread in waiting state; for an update from child thread
 		synchronized (t1) {
 			try {
-				System.out.println("main thread waiting for t1.");
+				System.out.println("main thread waiting for childThread...");
 				
 				/**
 				 * this statement : 
